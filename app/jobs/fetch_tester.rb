@@ -1,11 +1,15 @@
+require 'time'
+
 class FetchTester
     include TorqueBox::Injectors
 
     def initialize(options = {})
-      @queue = fetch('/topics/launcher')
-      puts @queue
+      puts "Fetching..."
+      @topic = fetch('/topics/fetcher')
+      puts "Got: #{@topic}"
     end
     def run
-      puts "Running"
+      puts "Publishing..."
+      @topic.publish("Blah, #{Time.now}")
     end
 end

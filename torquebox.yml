@@ -1,5 +1,9 @@
 topics:
-  /topics/launcher:
+  /topics/fetcher:
+
+messaging:
+  /topics/fetcher: Consumer
+
 jobs:
   tester:
     job: FetchTester
