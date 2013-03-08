@@ -1,0 +1,6 @@
+topics:
+  /topics/launcher:
+jobs:
+  tester:
+    job: FetchTester
+    cron: '*/5 * * * * ?'
