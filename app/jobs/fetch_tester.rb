@@ -9,7 +9,7 @@ class FetchTester
       @topic = fetch('/topics/fetcher')
       puts "Got: #{@topic}"
       @pr_cache   = TorqueBox::Infinispan::Cache.new(
-        :name    => 'pull_requests',
+        :name    => 'pull_requests'
         # do not persist while I am testing
         # :persist => '/data/treasure'
       )
